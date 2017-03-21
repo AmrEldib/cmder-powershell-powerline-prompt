@@ -1,5 +1,13 @@
 # cmder-powershell-powerline-prompt
 
+Custom prompt (and other configurations) for PowerShell in [Cmder](http://cmder.net/).  
+
+![Screenshot](Screenshot.png)
+
+## Aliases
+Store aliases in its own PowerShell script under the `profile.d` folder in a file (for example) named `alias.ps`.  
+There's an example for how to create an alias file in `alias.ps1.example`.  
+
 ## Setting up files in Cmder config folder
 
 It's better to store the files of this repo in its own folder so that it can be updated easily without messing up other files.  
