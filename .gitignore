@@ -1,1 +1,2 @@
 profile.d/alias.ps1
+profile.d/*.private.alias.ps1
