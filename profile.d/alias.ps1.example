@@ -1,6 +1,7 @@
 #######################################
 #         PowerShell Aliases
 # Sometimes Powershell can't run commands unless they're wrapped in a function
+# http://stackoverflow.com/questions/38981044/the-term-is-not-recognized-as-cmdlet-function-script-file-or-operable-program
 #######################################
 # ..
 Set-Alias -name ".." -value "cd.."
