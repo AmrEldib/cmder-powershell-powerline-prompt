@@ -5,8 +5,17 @@ Custom prompt (and other configurations) for PowerShell in [Cmder](http://cmder.
 ![Screenshot](Screenshot.png)
 
 ## Aliases
-Store aliases in its own PowerShell script under the `profile.d` folder in a file (for example) named `alias.ps`.  
-There's an example for how to create an alias file in `alias.ps1.example`.  
+Store aliases in `profile.d` folder. To easily manage aliases, create each alias in its own file with extension `.alias.ps1`.  
+To store a private alias that you don't want to include in the repo, create it with extensions `.private.alias.ps1`.  
+
+There's a special alias for quickly jumping to favorite folders: `goToFolder.alias.ps1`.  
+Favorite folders are listed in the file `goToFolder.config` under `profile.d`.  
+This file is a comma-separated file that lists an alias to a folder along with its target.  
+For example: `c` sends me to `~\Code`.  
+To use this command, I can simply type `g c` to go to `~\Code`.  
+
+To add additional folder aliases, simply add additional entries in the `goToFolder.config` folder.  
+See `profile.d\goToFolder.config.example` for example.  
 
 ## Setting up files in Cmder config folder
 
