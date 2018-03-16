@@ -63,7 +63,8 @@ function Write-GitPrompt() {
         Write-Host $arrowSymbol -NoNewLine -BackgroundColor $gitBackColor -ForegroundColor $pathBackColor
 
         # Write branch symbol and name
-        Write-Host " " $branchSymbol " " $status.Branch " " -NoNewLine -BackgroundColor $gitBackColor -ForegroundColor $gitForeColor
+        $branchString = [string]::Format(" {0} {1} ", $branchSymbol, $status.Branch)
+        Write-Host $branchString -NoNewLine -BackgroundColor $gitBackColor -ForegroundColor $gitForeColor
 
         <# Git status info
         HasWorking   : False
@@ -106,7 +107,8 @@ function tildaPath($Path) {
 # Replace the cmder prompt entirely with this.
 [ScriptBlock]$CmderPrompt = {
     $tp = tildaPath($pwd.ProviderPath)
-    Microsoft.PowerShell.Utility\Write-Host "`n" $tp " " -NoNewLine -BackgroundColor $pathBackColor -ForegroundColor $pathForeColor
+    $pathString = [string]::Format("`n{0} ", $tp)
+    Microsoft.PowerShell.Utility\Write-Host $pathString -NoNewLine -BackgroundColor $pathBackColor -ForegroundColor $pathForeColor
 
     getGitStatus($pwd.ProviderPath)
 }
