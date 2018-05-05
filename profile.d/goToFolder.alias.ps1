@@ -25,7 +25,7 @@ function Set-TargetFolder() {
         }
 
         begin {
-            $folderAlias = $PSBoundParameters[$ParameterName]
+            $folderAlias = $PSBoundParameters[$parameterName]
         }
 
         process {
